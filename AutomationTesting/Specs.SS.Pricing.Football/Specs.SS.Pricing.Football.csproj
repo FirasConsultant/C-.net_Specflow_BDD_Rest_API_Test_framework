@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFB0474D-7D9C-4945-8B49-86A83EFC5250}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Specs.SS.Pricing.Football</RootNamespace>
+    <AssemblyName>Specs.SS.Pricing.Football</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Office.Interop.12.0.4518.1014\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Office.Interop.12.0.4518.1014\lib\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.7.1.4791, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.1.4791, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.0.2.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spin.TradingServices.GTP.Domain.Store, Version=2.0.353.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\Spin.TradingServices.GTP.Domain.Store.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Audit.Domain, Version=2.0.35.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Audit.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Compression, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Cryptography, Version=2.1.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.ExcelManager, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.ExcelManager.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Extensions, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.IoC, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.JsonExtensions, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.JsonExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Logging, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Logging.Contract, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Logging.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Messaging, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Messaging.Configuration, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Messaging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Messaging.RabbitMQ, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Messaging.RabbitMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.NoSql, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.NoSql.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.Rest.Contract, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.Rest.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Architecture.ServiceExtensions, Version=2.1.79.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Architecture.ServiceExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.DAL.Domain, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.DAL.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.GTP.Domain, Version=2.0.382.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.GTP.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.GTP.DomainShared, Version=2.0.353.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.GTP.DomainShared.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.GTP.SDK">
+      <HintPath>..\packages\SS.GTP.SDK.2.0.248.0\lib\net40\SS.GTP.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Modelling.NFL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Modelling.NFL.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Modelling.NFL.GTP">
+      <HintPath>..\packages\SS.Modelling.NFL.GTP.2.0.53.0\lib\net40\SS.Modelling.NFL.GTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SS.Pricing.SDK, Version=3.0.39.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SS.Pricing.SDK.3.0.39.0\lib\net45\SS.Pricing.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FootballAssign2RLaddertoMD.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FootballAssign2RLaddertoMD.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FootballDisplayMetaData.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FootballDisplayMetaData.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FootballMarketDefinitions.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FootballMarketDefinitions.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SS.Pricing.AutomationTesting\App.config">
+      <Link>App.config</Link>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FootballAssign2RLaddertoMD.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FootballAssign2RLaddertoMD.feature.cs</LastGenOutput>
+    </None>
+    <None Include="FootballDisplayMetaData.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FootballDisplayMetaData.feature.cs</LastGenOutput>
+    </None>
+    <None Include="FootballMarketDefinitions.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FootballMarketDefinitions.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SS.Pricing.AutomationTesting\SS.Pricing.AutomationTesting.csproj">
+      <Project>{3de23a51-6c02-4aa1-beef-8a22b5c09bc2}</Project>
+      <Name>SS.Pricing.AutomationTesting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\MathNet.Numerics.authors.txt" />
+    <Content Include="App_Readme\MathNet.Numerics.copyright.txt" />
+    <Content Include="App_Readme\MathNet.Numerics.readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
